@@ -1,26 +1,79 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-uni: var(--font-uni-sans-next);
+  --font-uni-book: var(--font-uni-sans-book-next);
+  --font-inter: var(--font-inter-next);
+  --font-segoe: var(--font-segoe-ui-next);
+  --font-roboto: var(--font-roboto-next);
+
+  --color-bg-dark: #000625;
+  --color-bg-gray: #f0f0f0;
+  --color-text-main: #1a1f36;
+  --color-border-gray: #dbdeec;
+  --color-accent: #0096e9;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  .section-title {
+    @apply border-accent -ml-3.75 border-l-2 pl-3.75 font-inter text-[18px] leading-6.5 font-semibold md:text-[34px] md:leading-normal md:font-bold;
   }
 }
 
+@layer utilities {
+  .text-16-16-400 {
+    @apply text-base leading-4 font-normal;
+  }
+
+  .text-18-22-600 {
+    @apply text-lg leading-5.5 font-semibold;
+  }
+
+  .text-18-22-400 {
+    @apply text-lg leading-5.5 font-normal;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
