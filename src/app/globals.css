@@ -15,8 +15,58 @@
 }
 
 @layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    min-height: 100%;
+  }
+
+  body {
+    min-height: 100vh;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  img,
+  picture,
+  svg,
+  video {
+    display: block;
+    max-width: 100%;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+@layer components {
   .section-title {
-    @apply border-accent -ml-3.75 border-l-2 pl-3.75 font-inter text-[18px] leading-6.5 font-semibold md:text-[34px] md:leading-normal md:font-bold;
+    @apply border-accent -ml-3.75 border-l-2 pl-3.75 font-inter text-[18px] leading-[normal] font-semibold md:font-bold min-[801px]:text-[34px];
+  }
+
+  .section-subtitle {
+    @apply border-accent -ml-3.75 border-l-2 pl-3.75 font-inter text-[18px] leading-[normal] font-semibold md:font-bold min-[801px]:text-[24px];
   }
 }
 
@@ -32,48 +82,4 @@
   .text-18-22-400 {
     @apply text-lg leading-5.5 font-normal;
   }
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  min-height: 100%;
-}
-
-body {
-  min-height: 100vh;
-}
-
-button,
-input,
-textarea,
-select {
-  font: inherit;
-}
-
-button {
-  cursor: pointer;
-}
-
-img,
-picture,
-svg,
-video {
-  display: block;
-  max-width: 100%;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
 }

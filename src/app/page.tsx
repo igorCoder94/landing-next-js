@@ -1,6 +1,7 @@
 import Control from '@/sections/home/control/control';
 import Dispatch from '@/sections/home/dispatch/dispatch';
 import Hero from '@/sections/home/hero/hero';
+import Integration from '@/sections/home/integration/integration';
 import MaintenanceAndRepair from '@/sections/home/maintenance-and-repair/maintenance-and-repair';
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <Dispatch />
       <MaintenanceAndRepair />
       <Control />
+      <Integration />
     </>
   );
 }
